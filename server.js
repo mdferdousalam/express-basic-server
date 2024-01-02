@@ -1,6 +1,11 @@
 const express = require('express');
+require('dotenv').config();
+
+//const config=require('config');
 
 const app = express();
+
+const port=process.env.PORT;
 
 app.use('/reqtype', (req, res, next) => {
   console.log('Request type: ', req.method);
@@ -13,4 +18,4 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(8120, () => console.log('Bismillah app is listening on port 8120.'));
+app.listen(`${port}`, () => console.log(`Bismillah app is listening on port ${port}`));
