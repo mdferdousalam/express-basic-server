@@ -18,4 +18,5 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(`${port}`, () => console.log(`Bismillah app is listening on port ${port}`));
+app.listen(port, () => console.log(`Bismillah app is listening on port ${port}`));
+
